@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokeapp</title>
+    <link rel="stylesheet" href="static/assets/css/styles.css">
+</head>
+
+<header>
+    <div class="logo">PokeLove</div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="#" class="active">Découverte</a>
+            </li>
+            <li>
+                <a href="static/Histoire.html">Histoire</a>
+            </li>
+            <li>
+                <a href="">Favoris</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<body>
+
+    <div class="container1">
+        <div class="login-box">
+ 
+            <form>
+              <div class="user-box">
+                <input type="text" name="pokemonName" id="pokemonName">
+                <label for="pokemonName">ID ou Nom du Pokemon</label>
+              </div>
+              <center>
+                <button type="button" onclick="getPokemonImage()">Pokemon
+                <span></span></button>
+              </center>
+            </form>
+          </div>
+    </div>
+    <div class="container2">
+    <div class="card">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="card-inner">
+          <div id="pokemonImage"></div>
+          <div id="pokemonNameDisplay"></div>
+          <div id="pokemonIDDisplay"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <footer>
+      <ul class="social_icon">
+          <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+      </ul>
+      <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+      <p>©2023 Garat Tom | All Rights Reserved</p>
+  </footer>
+    
+<script>function getPokemonImage() {
+    // Remove any existing Pokemon image
+    var existingPokemonImage = document.getElementById("pokemonImage").querySelector("img");
+    if (existingPokemonImage) {
+      existingPokemonImage.remove();
+    }
+    
+    var pokemonName = document.getElementById("pokemonName").value;
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                var pokemonData = JSON.parse(xhr.responseText);
+                var pokemonImage = document.createElement("img");
+                pokemonImage.src = pokemonData.sprites.front_default;
+                document.getElementById("pokemonImage").appendChild(pokemonImage);
+                document.getElementById("pokemonNameDisplay").innerHTML = pokemonData.name;
+                document.getElementById("pokemonIDDisplay").innerHTML = "ID: " + pokemonData.id;
+            } else {
+                console.log("Erreur lors de la récupération de l'image du Pokémon");
+            }
+        }
+    };
+    xhr.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokemonName.toLowerCase());
+    xhr.send();
+  }
+  
+
+hamburger = document.querySelector(".hamburger");
+      hamburger.onclick = function() {
+          navBar = document.querySelector(".nav-bar")
+          navBar.classList.toggle("active")
+      }</script>
+</body>
+</html>

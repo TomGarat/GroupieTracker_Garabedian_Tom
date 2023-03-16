@@ -1,0 +1,232 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Google sans regular";
+    box-sizing: border-box;
+}
+body
+{
+    background: #444444;
+}
+header
+{
+    width: 100%;
+    height: 80px;
+    background: rgba(24, 20, 20, 0.987);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+.logo
+{
+    font-size: 28px;
+    font-weight: bold;
+    color: #fefefe;
+}
+.hamburger
+{
+    display: none;
+}
+.nav-bar ul
+{
+    display: flex;
+}
+.nav-bar ul li a
+{
+    display: block;
+    color: #fefefe;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.nav-bar ul li a:hover
+{
+    color: #11101b;
+    background: #fefefe;
+}
+.nav-bar ul li a.active
+{
+    color: #11101b;
+    background: #fefefe;
+}
+@media only screen and (max-width: 1320px)
+{
+    header 
+    {
+    padding: 0 50px;
+    }
+}
+@media only screen and (max-width: 1100px)
+{
+    header 
+    {
+    padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 900px)
+{
+   .hamburger
+   {
+    display: block;
+    cursor: pointer;
+   }
+   .hamburger .line
+   {
+    width: 30px;
+    height: 3px;
+    background: #fefefe;
+    margin: 6px 0;
+   }
+   .nav-bar.active
+   {
+    height: 450px;
+   }
+   .nav-bar
+   {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: rgba(24, 20, 20, 0.987);
+    transition: 0.2s;
+    overflow: hidden;
+   }
+   .nav-bar ul 
+   {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+   }
+   .nav-bar.active ul
+   {
+    opacity: 1;
+   }
+   .nav-bar ul li a 
+   {
+    margin-bottom: 12px;
+   }
+}
+/*-----------------------------------------CartesHistoire-------------------------------------------------*/
+.card 
+{
+    width: 410px;
+    height: 454px;
+    border-radius: 4px;
+    background: #212121;
+    display: flex;
+    gap: 5px;
+    padding: .4em;
+}
+.card p 
+{
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .5s;
+    background: #212121;
+    border: 1px solid #53ef7d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card p:hover 
+{
+    flex: 4;
+}
+.card p span 
+{
+    min-width: 14em;
+    padding: 3em;
+    text-align: center;
+    transform: rotate(-90deg);
+    transition: all .5s;
+    color: #53ef7d;
+} 
+.card p:hover span 
+{
+    transform: rotate(0);
+}
+  .container1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/*-----------------------------------------Footer-------------------------------------------------*/
+footer
+{
+    position: relative;
+    width: 100%;
+    background: #000;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer .social_icon,
+footer .menu
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+footer .social_icon li,
+footer .menu li
+{
+    list-style: none;
+
+}
+footer .social_icon li a
+{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social_icon li a:hover
+
+{
+    transform: translateY(-10px);
+}
+footer .menu li a
+{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+footer .menu li a:hover
+{
+    opacity: 1;
+}
+footer p
+{
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
