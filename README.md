@@ -3,7 +3,7 @@ Groupie Tracker
 Description :
 Groupie Tracker est un site Web hébergé en GoLang qui affiche les données récupérées depuis une des APIs proposées. Le site permet aux utilisateurs d'afficher les informations sur les Pokemon, y compris leur nom et leur ID, sur une carte en appuyant sur un bouton. Le site propose également une page contenant l'histoire de chaque génération Pokemon.
 
-Installation ::
+Installation :
 - Clonez le dépôt Git : git clone https://github.com/your-username/groupie-tracker.git
 - Accédez au dossier du projet : cd groupie-tracker
 - Démarrer le serveur : go run main.go
@@ -12,12 +12,12 @@ Installation ::
 Utilisation :
 Une fois que vous avez accédé au site en entrant "localhost:8080" dans la barre d'adresse, vous pouvez accéder à la page principale "index.html". Vous pouvez appuyer sur le bouton "Afficher Pokemon" pour afficher les informations sur les Pokemon sur une carte.
 Le site contient également une page "Histoire des générations Pokemon" qui contient des informations sur chaque génération Pokemon.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Document récapitulatif du travail réalisé et de l'organisation personnelle :
 
-
-Document récapitulatif du travail réalisé et de l'organisation personnelle
-Introduction
+Introduction :
 Ce document récapitule le travail réalisé et l'organisation personnelle pour le projet "Groupie Tracker", un site Web hébergé en GoLang qui affiche les données récupérées depuis une des APIs proposées pour afficher des informations sur les Pokemon.
----------------------------------------------------------------------------------------------------------------------------
+
 Travail réalisé :
 
 Le travail réalisé pour ce projet comprenait les étapes suivantes :
